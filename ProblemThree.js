@@ -2,7 +2,7 @@ const bands = ["Kiss", "Aerosmith", "ACDC", "Led Zeppelin", "Nickelback"];
 
 function favoriteBandAlert(bands) {
 	alertString = "";
-	for(i = 0; i < bands.length; i++) {
+	for(var i = 0; i < bands.length; i++) {
 		if(bands[i] == "Nickelback") {
 			alertString = "I DON'T love " + bands[i] + "!";
 		} else {
