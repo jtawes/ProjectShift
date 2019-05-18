@@ -37,8 +37,6 @@ function budgetToBills(amount, bills) {
 		let bills = arguments[1].sort(function(a,b){
 			return b - a;
 		});
-		
-		//console.log("bills: " + bills);
 
 		let change = amount;
 
@@ -46,11 +44,7 @@ function budgetToBills(amount, bills) {
 			let denom = bills[x];
 			let modulo = change % denom;
 			let value = (change - modulo)/denom;
-
 			change = change - denom*value;
-			// console.log("bills[x]: " + bills[x]);
-			// console.log("value: " + value);
-			// console.log("modulo: " + modulo);
 			
 			if( value > 0 ) {
 				withdrawalAmounts[denom] = value;
@@ -63,6 +57,6 @@ function budgetToBills(amount, bills) {
 
 console.log(budgetToBills(1754, [20, 10, 5, 1]));
 console.log(budgetToBills(1754, [100, 20, 50, 10, 5, 1]));
-console.log(budgetToBills(1200, [200, 100, 50, 20]));
-console.log(budgetToBills(0, [20, 5, 1]));
-console.log(budgetToBills(-350, [100, 20, 50, 10]));
+// console.log(budgetToBills(1200, [200, 100, 50, 20]));
+// console.log(budgetToBills(0, [20, 5, 1]));
+// console.log(budgetToBills(-350, [100, 20, 50, 10]));
